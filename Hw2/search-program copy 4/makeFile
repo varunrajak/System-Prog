@@ -1,0 +1,9 @@
+# define the C compiler to use
+CC = gcc
+
+search.o: search.c
+	$(CC) -c search.c -o search.o $(CFLAGS)
+
+
+search: search.o gcc
+	gcc search.c -o search
